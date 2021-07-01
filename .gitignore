@@ -113,13 +113,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
-# carla 
+# CARLA
+CARLA_0.9.11.zip
 CARLA/CarlaUE4
 CARLA/Co-Simulation
 CARLA/Engine
 CARLA/HDMaps
 CARLA/Plugins
-CARLA_0.9.11.zip
 CARLA/Dockerfile
-CARLA/CarlaUE4.exe
