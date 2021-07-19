@@ -121,3 +121,5 @@ CARLA/Engine
 CARLA/HDMaps
 CARLA/Plugins
 CARLA/Dockerfile
+CARLA/PythonAPI/odr/*
+CARLA/PythonAPI/roadrunner/*
