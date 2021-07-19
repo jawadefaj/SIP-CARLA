@@ -46,7 +46,7 @@ def main():
     argparser.add_argument(
         '-n', '--number-of-vehicles',
         metavar='N',
-        default=10,
+        default=80,
         type=int,
         help='number of vehicles (default: 10)')
     argparser.add_argument(
@@ -117,6 +117,7 @@ def main():
 
 
         if args.sync:
+            print("hehe")
             settings = world.get_settings()
             traffic_manager.set_synchronous_mode(True)
             if not settings.synchronous_mode:
