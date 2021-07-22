@@ -95,9 +95,9 @@ def set_camera_over_intersection(world, location=None, rotation=None):
     if world is None:
         return Exception('world object can not be empty')
     if location is None:
-        location = location = carla.Location(x=80, y=-133, z=80)
+        location = carla.Location(x=80, y=-133, z=85)
     if rotation is None:
-        rotation = rotation = carla.Rotation(pitch=-90, yaw=95, roll=0)
+        rotation = carla.Rotation(pitch=-90, yaw=95, roll=0)
     spectator = world.get_spectator()
     spectator.set_transform(carla.Transform(location, rotation))
     pass
