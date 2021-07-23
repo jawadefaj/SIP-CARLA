@@ -12,7 +12,7 @@ import glob
 import os
 import sys
 import time
-
+from get_spawn_points import *
 try:
     sys.path.append(glob.glob('../carla/dist/carla-*%d.%d-%s.egg' % (
         sys.version_info.major,
@@ -140,9 +140,10 @@ def main():
 
         blueprints = sorted(blueprints, key=lambda bp: bp.id)
 
+        location = carla.Location(x=80, y=-133, z=80)
+        extent = carla.Vector3D(x=100, y=100)
         spawn_points = world.get_map().get_spawn_points()
         number_of_spawn_points = len(spawn_points)
-
         if args.number_of_vehicles < number_of_spawn_points:
             random.shuffle(spawn_points)
         elif args.number_of_vehicles > number_of_spawn_points:
