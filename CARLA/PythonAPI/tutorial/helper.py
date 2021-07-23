@@ -100,4 +100,4 @@ def set_camera_over_intersection(world, location=None, rotation=None):
         rotation = rotation = carla.Rotation(pitch=-90, yaw=95, roll=0)
     spectator = world.get_spectator()
     spectator.set_transform(carla.Transform(location, rotation))
-    pass
+    return spectator
