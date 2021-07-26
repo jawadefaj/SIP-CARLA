@@ -101,3 +101,16 @@ def set_camera_over_intersection(world, location=None, rotation=None):
     spectator = world.get_spectator()
     spectator.set_transform(carla.Transform(location, rotation))
     pass
+
+def create_bounding_box(location, rotation, dim, color):
+    if location is None:
+        location = carla.Location(x=80, y=-133, z= 0)
+    if rotation is None:
+        rotation = carla.Rotation(pitch=-90, yaw=95, roll=0)
+    bounding_box = carla.BoundingBox(location, carla.Vector3D(20,50,50))
+    return bounding_box
+    
+
+def draw_bounding_box(world, bounding_box, color, thickness, life_time):
+
+    pass
