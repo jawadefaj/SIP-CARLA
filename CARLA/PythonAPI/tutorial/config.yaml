@@ -23,13 +23,21 @@ box_dimention:
 
 
 incoming_road_1:
-  x:
-  y:
-  z:
+  x: 70.446167
+  y: -130.055023
+  z:  2.0
 
 incoming_road_2:
-  x:
-  y:
-  z:
-
+  x: 80.446167
+  y: -160.055023
+  z: 2.0
+  
+incoming_road_3:
+  x: 110.446167
+  y: -130.055023
+  z: 2.0
+incoming_road_4:
+  x: 80.446167
+  y: -80.055023
+  z: 2.0
 
