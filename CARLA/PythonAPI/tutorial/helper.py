@@ -1,19 +1,24 @@
 from random import random
 import carla
+from Configuration import Configuration
 
-class ExtendedClient():
-    
-    pass
+config = Configuration()
 
-def connectToClient(host= 'localhost', port=2000, timeout=10):
+def connectToClient(host=None, port=None, timeout=5):
+    if host is None:
+        host = config.get('host')
+    if port is None:
+        port = config.get('port')
+        
     try:
         client = carla.Client(host, port)
         client.set_timeout(timeout)
-        print('CARLA %s connected at %s:%d.' % (client.get_server_version(), host, port))
-        print(client)
     except RuntimeError:
         print('Failed to connect to %s:%d.' % (host, port))
+    
     if client is not None:
+        print('CARLA %s connected at %s:%d.' % (client.get_server_version(), host, port))
+        print(client)
         return client
     pass
 
@@ -95,9 +100,13 @@ def set_camera_over_intersection(world, location=None, rotation=None):
     if world is None:
         return Exception('world object can not be empty')
     if location is None:
-        location = carla.Location(x=80, y=-133, z=85)
+        cam_location = config.get('camera_location')
+        location = carla.Location(x=cam_location['x'], y=cam_location['y'], z=cam_location['z'])
     if rotation is None:
-        rotation = carla.Rotation(pitch=-90, yaw=95, roll=0)
+        cam_rotation = config.get('camera_rotation')
+        rotation = carla.Rotation(pitch=cam_rotation['pitch'], 
+                                  yaw=cam_rotation['yaw'], 
+                                  roll=cam_rotation['roll'])
     spectator = world.get_spectator()
     spectator.set_transform(carla.Transform(location, rotation))
     pass
@@ -114,3 +123,8 @@ def create_bounding_box(location, rotation, dim, color):
 def draw_bounding_box(world, bounding_box, color, thickness, life_time):
 
     pass
+
+def test_configuration():
+    loc = config.get('camera_location')
+    rot = config.get('camera_rotation')
+    print(loc, rot)
