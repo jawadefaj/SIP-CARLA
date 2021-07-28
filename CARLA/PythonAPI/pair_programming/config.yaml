@@ -1,0 +1,55 @@
+
+
+host: localhost
+port: 2000
+
+
+camera_location:
+  x: 87.4882583618164
+  y: -137.6378936767578
+  z: 120
+
+
+camera_rotation:
+  pitch: -88.2068099975586
+  yaw: -87.31599426269531
+  roll: 0.0031104013323783875
+
+box_location:
+  x: 85
+  y: -135
+  z: 0
+
+box_rotation:
+  pitch: 0
+  yaw: 0 
+  roll: 0
+
+box_dimention:
+  x: 65
+  y: 50
+  z: 20
+
+spawn_location:
+  x: 84.184067
+  y: -105.191704
+  z: 8.305596
+
+incoming_road_1:
+  x: 70.446167
+  y: -130.055023
+  z:  2.0
+
+incoming_road_2:
+  x: 80.446167
+  y: -160.055023
+  z: 2.0
+  
+incoming_road_3:
+  x: 110.446167
+  y: -130.055023
+  z: 2.0
+incoming_road_4:
+  x: 80.446167
+  y: -80.055023
+  z: 2.0
