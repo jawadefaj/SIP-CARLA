@@ -1,5 +1,6 @@
 exec(open("init.py").read())
-from Configuration import Configuration
+# from Configuration import Configuration
+from library import Configuration
 import carla
 
 
