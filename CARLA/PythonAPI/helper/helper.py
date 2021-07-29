@@ -1,5 +1,5 @@
-exec(open("init.py").read())
-# from Configuration import Configuration
+# exec(open("init.py").read())
+from helper import init
 from library import Configuration
 import carla
 
@@ -90,3 +90,12 @@ def filter_spawn_points(bounding_box, spawn_points):
         else:
             filtered_spawn_points.append(spawn_point)
     return filtered_spawn_points
+
+
+
+def reset_carla_world(client):
+    if client is not None:
+        client.reload_world(True)
+    else:
+        print("empty client can not reload world")
+    pass

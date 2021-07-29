@@ -12,5 +12,4 @@ except IndexError:
     pass
 
 import carla
-sys.path.append('c:\\Users\\abjawad\\Documents\\GitHub\\SIP-CARLA\\CARLA\\PythonAPI')
 print('Carla import successful')
