@@ -1,9 +1,19 @@
 from random import random
 import carla
 
-class ExtendedClient():
-    
-    pass
+class Helper(object):
+    """Base class to define agents in CARLA"""
+
+    def __init__(self, host):
+        """
+        Constructor method.
+
+            :param vehicle: actor to apply to local planner logic onto
+        """
+        self.host = host
+    def get_host(self):
+        """Get method for protected member local planner"""
+        return self.host
 
 def connectToClient(host= 'localhost', port=2000, timeout=10):
     try:
