@@ -1,5 +1,5 @@
 import yaml
-from DotDict import DotDict
+from .DotDict import DotDict
 
 
 class Configuration:
@@ -11,7 +11,7 @@ class Configuration:
 
 
     def load(self):
-        with open('./config.yaml', 'r') as stream:
+        with open('../config.yaml', 'r') as stream:
             self.dic = DotDict(yaml.safe_load(stream))
             # print(self.dic)
             
