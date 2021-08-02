@@ -18,4 +18,6 @@ class simulation():
     def reset_simulation(self):
         helper.reset_carla_world(self.client)
 
-    
+    # record a scene 
+
+    # replay a scene 
